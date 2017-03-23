@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title> Calculator </title>
+  <link rel="stylesheet" type="text/css" href="calc.css">
+  <script type="text/javascript" src="calc.js"></script>
+</head>
+<body>
+<h2 style="text-align:center"> Calculator </h2>
+<br/>
+<form Name="cal">
+<table align="center" border="3" >
+<tr>
+<td colspan=4><center><input type=button value="C" OnClick="AllClear();cal.display.value=''"><input style= "background-color:white" type=text Name="displaybox"><input style= "background-color:white" type=text Name="display"></center></td>
+</tr>
+<tr>
+<td><input type=button value="1" OnClick="AddDigit('1');cal.display.value+='1'"></td>
+<td><input type=button value="2" OnClick="AddDigit('2');cal.display.value+='2'"></td>
+<td><input type=button value="3" OnClick="AddDigit('3');cal.display.value+='3'"></td>
+<td><input id="act" type=button value="+" OnClick="Operate('+');cal.display.value+='+'"/></td>
+</tr>
+<tr>
+<td><input type=button value="4" OnClick="AddDigit('4');cal.display.value+='4'"></td>
+<td><input type=button value="5" OnClick="AddDigit('5');cal.display.value+='5'"></td>
+<td><input type=button value="6" OnClick="AddDigit('6');cal.display.value+='6'"></td>
+<td><input id="act" type=button value="-" OnClick="Operate('-');cal.display.value+='-'"></td>
+</tr>
+
+<tr>
+<td><input type=button value="7" OnClick="AddDigit('7');cal.display.value+='7'"></td>
+<td><input type=button value="8" OnClick="AddDigit('8');cal.display.value+='8'"></td>
+<td><input type=button value="9" OnClick="AddDigit('9');cal.display.value+='9'"></td>
+<!--<td><input id="act" type=button value="x" OnClick="cal.displaybox.value+='*'"></td> -->
+<td><input id="act" type=button value="x" OnClick="Operate('*');cal.display.value+='*'"/></td>
+
+</tr>
+<tr>
+<td><input type=button value="." OnClick="AddDigit('.');cal.display.value+='.'"></td>
+<td><input type=button value="0" OnClick="AddDigit('0');cal.display.value+='0'"></td>
+<td><input type=button value="=" OnClick="Calculate()"></td>
+<td><input id="act" type=button value="/" OnClick="Operate('/');cal.display.value+='/'"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
